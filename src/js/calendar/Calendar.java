@@ -14,13 +14,25 @@ public class Calendar {
 	public static void main(String[] args) {
 	
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("월을 입력하세요");
-		
-		int month = scanner.nextInt();
-		
+		String prompt = "cal> ";
 		Calendar cal = new Calendar();
+		int month = 1;
 		
-		System.out.printf("%d월의 최대 일수는 %d입니다.", month, cal.getMaxDaysofMonth(month));
+		while (true) {
+			System.out.println("월을 입력하세요");
+			System.out.print(prompt);
+			month = scanner.nextInt();
+			
+			if (month == -1) {
+				break;
+			} else if (month > 12) {
+				continue;
+			}
+		
+			System.out.printf("%d월의 최대 일수는 %d입니다.", month, cal.getMaxDaysofMonth(month));
+		}
+
+		System.out.println("Bye~~");
 		
 		scanner.close();
 		
