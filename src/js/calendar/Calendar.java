@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calendar {
 
-	private static final int[] MAX_DAYS = {32, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	private static final int[] MAX_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	
 	private int getMaxDaysofMonth(int month) {
 		
