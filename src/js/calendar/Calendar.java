@@ -32,7 +32,7 @@ public class Calendar {
 		
 		int totalday = 0;
 		int setweek = 0;
-		for (int i = 1970; i < year; i++) {
+		for (int i = 1970; i < year; i++) {     // 1970년 1월 1일은 목요일입니다.
 			if (getLeapYear(i)) {
 				totalday = totalday + 366;
 			} else {
@@ -45,7 +45,7 @@ public class Calendar {
 		}
 		
 		setweek = (totalday+4) % 7 + 1;
-		
+
 		for (int j=0;j < setweek-1; j++) {
 			System.out.print("   ");
 		}
